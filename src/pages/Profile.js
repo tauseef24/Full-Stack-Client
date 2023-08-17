@@ -17,12 +17,12 @@ function Profile() {
 
     useEffect(() => {
         axios
-            .get(`http://localhost:3001/auth/basicinfo/${id}`)
+            .get(`https://full-stack-server-akzk.onrender.com/auth/basicinfo/${id}`)
             .then((response) => {
                 setUsername(response.data.username);
             })
 
-        axios.get(`http://localhost:3001/posts/byuserId/${id}`).then((response) => {
+        axios.get(`https://full-stack-server-akzk.onrender.com/posts/byuserId/${id}`).then((response) => {
             setListOfPosts(response.data);
         })
     }, [])
